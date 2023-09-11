@@ -37,6 +37,7 @@
             @endif
 
             <div style="border-color: #1a1d20" >
+                <img src="public/images_folder/lms.png">
                 <h1>Welcome to LMS</h1>
             </div>
         </div>
