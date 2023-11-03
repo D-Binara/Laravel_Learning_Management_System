@@ -7,4 +7,5 @@
         <h1>Welcome to LMS</h1>
     </div>
 
+
 @endsection
