@@ -76,14 +76,10 @@
         </nav>
 
 
-        @extends('dashboard.admin.layouts.admin')
+        <main class="py-4">
+            @yield('content')
+        </main>
 
-        @section('title', '| Admin | Dashboard')
-
-
-        @section('content')
-
-        @endsection
     </div>
 </body>
 </html>
