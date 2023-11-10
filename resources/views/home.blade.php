@@ -1,6 +1,14 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
+
+@extends('dashboard.admin.layouts.admin')
+
+@section('title', '| Admin | Dashboard')
 
 @section('content')
+
+@endsection
+
+{{--@section('content_Home')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -26,7 +34,7 @@
     </div>
 @endsection
 
-@section('content2')
+@section('content_Home2')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9">
@@ -50,4 +58,5 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection--}}
+
