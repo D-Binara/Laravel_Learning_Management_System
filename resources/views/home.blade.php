@@ -1,5 +1,3 @@
-{{--@extends('layouts.app')--}}
-
 @extends('dashboard.admin.layouts.admin')
 
 @section('title', '| Admin | Dashboard')
@@ -8,7 +6,7 @@
 
 @endsection
 
-{{--@section('content_Home')
+@section('content_Home')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -58,5 +56,5 @@
             </div>
         </div>
     </div>
-@endsection--}}
+@endsection
 
