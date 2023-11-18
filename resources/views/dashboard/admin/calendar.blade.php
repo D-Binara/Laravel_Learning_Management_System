@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,13 +15,13 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini">
-
+<body class="hold-transition sidebar-mini">--}}
 @extends('dashboard.admin.layouts.admin')
 
 @section('title', '| Admin | Dashboard')
 
 @section('content')
+
     <div class="wrapper">
 
         <!-- Content Wrapper. Contains page content -->
@@ -126,14 +126,6 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.2.0
-            </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
-            reserved.
-        </footer>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -326,5 +318,6 @@
 
     </script>
     @endsection
-</body>
-</html>
+{{--</body>--}}
+{{--</html>--}}
+
