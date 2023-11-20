@@ -18,6 +18,7 @@ class CreateSubjectsTable extends Migration
             $table->string('subject_name');
             $table->integer('subject_credit');
             $table->timestamps();
+            $table->longblob('subject_image');
         });
     }
 
