@@ -28,3 +28,8 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'indexAdmin']
 Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'calendar'])->name('calender');
 Route::get('/dashboard',[App\Http\Controllers\dashboardController::class, 'dashboard'])->name('dashboard');
 
+Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
+    return view('dashboard');
+}]);
+
+
