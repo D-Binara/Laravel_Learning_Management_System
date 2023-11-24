@@ -23,13 +23,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'indexAdmin'])->name('admin');
 Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'calendar'])->name('calender');
 Route::get('/dashboard',[App\Http\Controllers\dashboardController::class, 'dashboard'])->name('dashboard');
 
-Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
-    return view('dashboard');
+
+
+Route::get('/admin', ['middleware' => 'admin', function () {
+    //
 }]);
+
+
 
 

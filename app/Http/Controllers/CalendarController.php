@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class CalendarController extends Controller
 {
     public function calendar(){
-        return view ('dashboard.admin.calendar');
+        return view ('student.calendar');
     }
 }

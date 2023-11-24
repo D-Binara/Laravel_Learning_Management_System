@@ -11,7 +11,7 @@ class dashboardController extends Controller
     {
         $subjects = Subject::all();
 
-        return view('dashboard',compact('subjects'));
+        return view('student.dashboard',compact('subjects'));
     }
 
 }

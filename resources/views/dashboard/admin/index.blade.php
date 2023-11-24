@@ -4,6 +4,7 @@
 
 @section('content')
 
+    Binara
 @endsection
 
 
