@@ -38,9 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function isAdmin()
+
+    public function hasAnyRole($admin)
     {
-        return $this->admin; // this looks for an admin column in your users table
+        return in_array($this->role, $admin);
     }
+
 
 }

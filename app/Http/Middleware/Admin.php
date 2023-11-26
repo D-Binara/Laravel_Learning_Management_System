@@ -16,13 +16,15 @@ class Admin
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
 
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, ...$admin)
     {
-        if (Auth::User() &&  Auth::User()->admin == 1) {
-            return $next($request);
+        if (!$request->user() || !$request->user()->hasAnyRole($admin)) {
+            // Redirect or abort access if the user doesn't have the required role
+//            return redirect('/admin'); // You can modify this redirect as needed
         }
 
-        return redirect('/');
+        return $next($request);
     }
+
 
 }
