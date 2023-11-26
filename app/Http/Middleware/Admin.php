@@ -16,11 +16,11 @@ class Admin
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
 
-    public function handle($request, Closure $next, ...$admin)
+    public function handle($request, Closure $next)
     {
-        if (!$request->user() || !$request->user()->hasAnyRole($admin)) {
-            // Redirect or abort access if the user doesn't have the required role
-//            return redirect('/admin'); // You can modify this redirect as needed
+        if (!$request->user() || !$request->user()->isAdmin()) {
+            // Redirect or abort access if the user isn't an admin
+            return redirect('/home'); // Modify this redirect as needed
         }
 
         return $next($request);

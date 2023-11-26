@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Closure;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -39,10 +40,18 @@ class User extends Authenticatable
     ];
 
 
-    public function hasAnyRole($admin)
+    public function isAdmin()
     {
-        return in_array($this->role, $admin);
+        return $this->admin === 1;
+
     }
+
+    public function isUser()
+    {
+        return $this->admin === 0;
+
+    }
+
 
 
 }
