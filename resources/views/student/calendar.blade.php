@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">--}}
-@extends('dashboard.admin.layouts.admin')
+@extends('student.dashboard.studentDashboard')
 
-@section('title', '| Admin | Dashboard')
+@section('title', '| User | Dashboard')
 
 @section('content')
 
@@ -317,7 +317,7 @@
         })
 
     </script>
-    @endsection
+@endsection
 {{--</body>--}}
 {{--</html>--}}
 

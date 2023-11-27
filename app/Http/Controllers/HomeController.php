@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application admin.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -28,6 +28,6 @@ class HomeController extends Controller
 
         $users = User::where('name',$name)->get();
 
-        return view('home')->with(['users'=>$users]);
+        return view('student.home')->with(['users'=>$users]);
     }
 }

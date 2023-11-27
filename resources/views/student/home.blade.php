@@ -1,6 +1,6 @@
-@extends('dashboard.admin.layouts.admin')
+@extends('student.dashboard.studentDashboard')
 
-@section('title', '| Admin | Dashboard')
+@section('title', '| User | Dashboard')
 
 @section('content')
 

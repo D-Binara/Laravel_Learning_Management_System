@@ -1,23 +1,23 @@
-@extends('dashboard.admin.layouts.admin')
+@extends('student.dashboard.studentDashboard')
 
-@section('title', '| Admin | Dashboard')
+@section('title', '| User | Dashboard')
 
 @section('content')
 
     <div class="row">
-    @foreach($subjects as $sub)
-        {{-- Subject cards --}}
+        @foreach($subjects as $sub)
+            {{-- Subject cards --}}
             <div class="card-gray col-4">
                 <div class="card">
                     <div class="card-header">
                         {{$sub->subject_name}}
                     </div>
                     <div class="card-body">
-                        <img echo {{ asset($sub->subject_image) }}"  alt="{{$sub->subject_name}}">
+                        <img echo {{ asset($sub->subject_image) }}" alt="{{$sub->subject_name}}">
                     </div>
                 </div>
             </div>
-    @endforeach
+        @endforeach
     </div>
 @endsection
 

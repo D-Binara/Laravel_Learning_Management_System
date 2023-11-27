@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class User
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     */
+
+    public function handle($request, Closure $next)
+    {
+        if (!$request->user() || !$request->user()->isUser()) {
+            // Redirect or abort access if the user isn't an admin
+            return redirect('/admin'); // Modify this redirect as needed
+        }
+
+        return $next($request);
+    }
+
+
+}

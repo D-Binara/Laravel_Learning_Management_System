@@ -1,10 +1,10 @@
-@extends('dashboard.admin.layouts.admin')
+@extends('admin.layouts.adminDashboard')
 
 @section('title', '| Admin | Dashboard')
 
 @section('content')
 
-    Binara
+    Welcome to Admin Dashboard
 @endsection
 
 
