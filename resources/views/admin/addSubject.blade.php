@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label>Subject Image :-</label>
                         <label>
-                            <input type="file" placeholder="Subject Image" class="form-control">
+                            <input type="file" placeholder="Subject Image" name="subject_image" class="form-control">
                         </label>
                     </div>
 
