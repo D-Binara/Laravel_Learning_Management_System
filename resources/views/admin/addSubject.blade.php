@@ -3,11 +3,12 @@
 @section('title', '| Admin | Dashboard')
 
 @section('content')
-
+    @include('sweetalert::alert')
     <div class="col-sm-12 d-flex justify-content-center ">
         <div class="card">
             <div class="card-body ">
-                <form class="form-sample" method="post" action="{{route('addSubjectToDB')}}">
+                <form class="form-sample" method="post" action="{{route('addSubjectToDB')}}" enctype="multipart/form-data">
+                    @csrf
                         <h3 class="text-center">Add Subject</h3>
                     <div class="form-group">
                         <label>Subject Name :-</label>
