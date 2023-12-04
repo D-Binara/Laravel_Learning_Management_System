@@ -13,7 +13,7 @@
                         {{$sub->subject_name}}
                     </div>
                     <div class="card-body">
-                        <img echo {{ asset($sub->subject_image) }}" alt="{{$sub->subject_name}}">
+                        <img src="{{ asset('public/subject_images') }}" alt="{{$sub->subject_name}}">
                     </div>
                 </div>
             </div>

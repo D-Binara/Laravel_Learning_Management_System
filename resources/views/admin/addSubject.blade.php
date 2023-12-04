@@ -3,7 +3,7 @@
 @section('title', '| Admin | Dashboard')
 
 @section('content')
-    @include('sweetalert::alert')
+
     <div class="col-sm-12 d-flex justify-content-center ">
         <div class="card">
             <div class="card-body ">
