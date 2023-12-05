@@ -152,10 +152,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{\URL::to('/calendar')}}" class="nav-link">
+                        <a href="{{\URL::to('/deleteSubject')}}" class="nav-link">
                             <i class="nav-icon fas fa-calendar"></i>
                             <p>
-                                calendar
+                                Delete Subjects
                             </p>
                         </a>
                     </li>

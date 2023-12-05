@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="row container-fluid" style="margin-top: 10px">
         @foreach($subjects as $sub)
             {{-- Subject cards --}}
             <div class="card-gray col-4">
@@ -13,7 +13,7 @@
                         {{$sub->subject_name}}
                     </div>
                     <div class="card-body">
-                        <img src="{{ asset('public/subject_images') }}" alt="{{$sub->subject_name}}">
+                        <img src="{{ asset($sub->subject_image) }}" height="100" class="col-12" alt="{{$sub->subject_name}}">
                     </div>
                 </div>
             </div>
