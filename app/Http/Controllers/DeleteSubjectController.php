@@ -14,10 +14,8 @@ class DeleteSubjectController extends Controller
 
     public function deleteSubjectFromDB(Request $request)
     {
-        $subject = new Subject;
-        $subject->subject_name = $request->subject_name;
-        dump($subject);
-        $subject->delete();
+        $subject = Subject::where('subject_name', $request)->firstorfail()->delete();
+
 //        return redirect()->back();
     }
 }

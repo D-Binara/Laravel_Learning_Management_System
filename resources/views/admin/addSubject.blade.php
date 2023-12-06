@@ -17,6 +17,12 @@
                         </label><br>
                     </div>
                     <div class="form-group">
+                        <label>Subject Code  &nbsp:-</label>
+                        <label>
+                            <input type="text" placeholder="Subject Code" name="subject_code" id="subject_code" class="form-control">
+                        </label><br>
+                    </div>
+                    <div class="form-group">
                         <label>Subject Credit :-</label>
                         <label>
                             <input type="number" placeholder="Subject Credit" name="subject_credit" id="subject_credit" class="form-control">

@@ -21,6 +21,7 @@ class AddSubjectController extends Controller
 
         $subject = new Subject;
         $subject->subject_name = $request->subject_name;
+        $subject->subject_code = $request->subject_code;
         $subject->subject_credit = $request->subject_credit;
 
         $image = $request->file('subject_image');

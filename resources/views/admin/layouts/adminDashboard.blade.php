@@ -160,10 +160,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{\URL::to('/subjects')}}" class="nav-link">
                             <i class="nav-icon fas fa-cog"></i>
                             <p>
-                                Setting
+                                Subjects
                             </p>
                         </a>
                     </li>

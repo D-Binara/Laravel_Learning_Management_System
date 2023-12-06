@@ -10,10 +10,10 @@
             <div class="card-gray col-4">
                 <div class="card">
                     <div class="card-header">
-                        {{$sub->subject_name}}
+                        {{$sub->subject_name}} -  {{$sub->subject_code}}
                     </div>
-                    <div class="card-body">
-                        <img src="{{ asset($sub->subject_image) }}" height="100" class="col-12" alt="{{$sub->subject_name}}">
+                    <div class=" card-img">
+                        <img src="{{ asset($sub->subject_image) }}" height="100" class="card-img" alt="{{$sub->subject_name}}">
                     </div>
                 </div>
             </div>
