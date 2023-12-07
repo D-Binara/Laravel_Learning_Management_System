@@ -26,9 +26,11 @@ Route::group(['middleware' => ['auth', 'admin:admin']], function () {
     //add subject
     Route::get('/addSubject', [App\Http\Controllers\AddSubjectController::class, 'addSubject'])->name('addSubject');
     Route::post('/addSubjectToDB',[App\Http\Controllers\AddSubjectController::class,'addSubjectToDB'])->name('addSubjectToDB');
-    //delete subject
-    Route::get('/deleteSubject',[App\Http\Controllers\DeleteSubjectController::class, 'deleteSubject'])->name('deleteSubject');
-    Route::post('/deleteSubjectFromDB',[App\Http\Controllers\DeleteSubjectController::class,'deleteSubjectFromDB'])->name('deleteSubjectFromDB');
+    //Display Student
+    Route::get('/studentDisplay',[App\Http\Controllers\StudentDisplayController::class, 'studentDisplay'])->name('studentDisplay');
+    //add Student
+    Route::get('/addStudent', [App\Http\Controllers\AddStudentController::class, 'addStudent'])->name('addStudent');
+    Route::post('/addStudentToDB',[App\Http\Controllers\AddStudentController::class,'addStudentToDB'])->name('addStudentToDB');
 });
 
 //student routes

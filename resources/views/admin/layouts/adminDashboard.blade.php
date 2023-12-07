@@ -32,11 +32,11 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
+                <a href="/admin" class="nav-link">Home</a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
+           {{-- <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
-            </li>
+            </li>--}}
         </ul>
 
         <!-- Right navbar links -->
@@ -144,26 +144,34 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{\URL::to('/subjects')}}" class="nav-link">
+                            <i class="nav-icon fas fa-book-open"></i>
+                            <p>
+                                Subjects
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{\URL::to('/addSubject')}}" class="nav-link">
-                            <i class="nav-icon fas fa-user"></i>
+                            <i class="nav-icon fas fa-folder-plus"></i>
                             <p>
                                 Add Subjects
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{\URL::to('/deleteSubject')}}" class="nav-link">
-                            <i class="nav-icon fas fa-calendar"></i>
+                        <a href="{{\URL::to('/studentDisplay')}}" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
                             <p>
-                                Delete Subjects
+                                Students
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{\URL::to('/subjects')}}" class="nav-link">
-                            <i class="nav-icon fas fa-cog"></i>
+                        <a href="{{\URL::to('/addStudent')}}" class="nav-link">
+                            <i class="nav-icon fas fa-user-plus"></i>
                             <p>
-                                Subjects
+                                Add Students
                             </p>
                         </a>
                     </li>
