@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,10 +25,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $name = $request->input('name');
-
-        $users = User::where('name',$name)->get();
-
-        return view('student.home')->with(['users'=>$users]);
+        $loggedInUser = Auth::user(); // This gets the currently logged-in user
+        return view('student.home',compact('loggedInUser'));
     }
 }

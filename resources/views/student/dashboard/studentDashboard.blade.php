@@ -88,7 +88,7 @@
             @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                        {{ Auth::user()->username }}
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -145,7 +145,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{\URL::to('/dashboard')}}" class="nav-link">
-                            <i class="nav-icon fas fa-user"></i>
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
                             </p>
@@ -160,10 +160,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-cog"></i>
+                        <a href="{{\URL::to('/profile')}}" class="nav-link">
+                            <i class="nav-icon fas fa-user-graduate"></i>
                             <p>
-                                Setting
+                                Profile
                             </p>
                         </a>
                     </li>

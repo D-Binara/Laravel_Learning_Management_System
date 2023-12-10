@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth', 'user:admin']], function () {
     Route::get('/calendar', [App\Http\Controllers\CalendarController::class, 'calendar'])->name('calender');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [App\Http\Controllers\dashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
 
 });
 
