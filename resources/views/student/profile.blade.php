@@ -4,96 +4,88 @@
 
 
 @section('content')
-    <style>
-        body {
-            background-color: #efefef;
-        }
 
-        .profile-pic {
-            width: 200px;
-            max-height: 200px;
-            display: inline-block;
+    <div class=" container">
+        <div class="main-body">
 
-        }
-
-        .file-upload {
-            display: none;
-        }
-
-        .circle {
-            border-radius: 100% !important;
-            overflow: hidden;
-            width: 128px;
-            height: 128px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            position: absolute;
-            top: 72px;
-            
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-
-        }
-
-        .p-image {
-            position: absolute;
-            top: 167px;
-            right: 30px;
-            color: #666666;
-            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-        }
-
-        .p-image:hover {
-            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-        }
-
-        .upload-button {
-            font-size: 1.2em;
-        }
-
-        .upload-button:hover {
-            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-            color: #999;
-        }
-
-    </style>
-    <div class="container">
-        <div class="row justify-content-center h1" style="margin-top: 25px"> {{$details -> username}}</div>
-        {{--profile picture--}}
-        <div class="row">
-            <div class="small-12 medium-2 large-2 columns">
-                <div class="circle">
-                    <img class="profile-pic"
-                         src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
-
+            <div class="gutters-sm d-flex flex-column align-items-center">
+                <div class="col-md-4 mb-2 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                     class="rounded-circle" width="150">
+                                <div class="mt-3">
+                                    <h4>{{$details -> username}}</h4>
+                                    <p class="text-secondary mb-1">About</p>
+                                    <p class="text-muted font-size-sm">{{$details -> address}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-image">
-                    <i class="fa fa-camera upload-button"></i>
-                    <input class="file-upload" type="file" accept="image/*"/>
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Full Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{$details -> name}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{$details -> email}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Phone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{$details -> phone}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Mobile</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{$details -> mobile}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Address</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary" >
+                                    {{$details -> address}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a class="btn btn-info " target="__blank"
+                                       href="#">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        {{--profile picture end--}}
-        <div class="table">
-            <table class="d-flex justify-content-center">
-                <tr>
-                    <th>name:</th>
-                    <th>{{$details -> name}}</th>
-                </tr>
-                <tr>
-                    <th>Username:</th>
-                    <th>{{$details -> username}}</th>
-                </tr>
-                <tr>
-                    <th>Email:</th>
-                    <th>{{$details -> email}}</th>
-                </tr>
-            </table>
+
         </div>
     </div>
-
 
 
 @endsection
