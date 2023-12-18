@@ -13,13 +13,19 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
-                                     class="rounded-circle" width="150">
-                                <div class="mt-3">
-                                    <h4>{{$details -> username}}</h4>
-                                    <p class="text-secondary mb-1">About</p>
-                                    <p class="text-muted font-size-sm">{{$details -> address}}</p>
-                                </div>
+                                @if($details->profile_picture == null)
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                         class="rounded-circle" width="150">
+
+                                @else
+                                    <img src="{{asset($details->profile_picture) }}" alt="Admin"
+                                         class="rounded-circle" width="150">
+                                @endif
+                                    <div class="mt-3">
+                                        <h4>{{$details -> username}}</h4>
+                                        <p class="text-secondary mb-1">About</p>
+                                        <p class="text-muted font-size-sm">{{$details -> address}}</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -67,15 +73,15 @@
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Address</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary" >
+                                <div class="col-sm-9 text-secondary">
                                     {{$details -> address}}
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn btn-info " target="__blank"
-                                       href="#">Edit</a>
+                                <div class="col-sm-12 text-right">
+                                    <a class="btn btn-primary w-25 "
+                                       href="{{\URL::to('/editProfile')}}">Edit</a>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +92,5 @@
 
         </div>
     </div>
-
 
 @endsection

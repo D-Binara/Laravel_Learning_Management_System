@@ -40,6 +40,10 @@ Route::group(['middleware' => ['auth', 'user:admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\dashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
 
+    //edit profile
+    Route::get('/editProfile', [App\Http\Controllers\EditProfileController::class, 'editProfile'])->name('editProfile');
+    Route::put('/editProfileDB', [App\Http\Controllers\EditProfileController::class, 'editProfileDB'])->name('editProfileDB');
+
 });
 
 
