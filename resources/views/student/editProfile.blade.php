@@ -48,21 +48,4 @@
         </div>
     </div>
 
-    <script>
-        // Example using fetch API
-        document.querySelector('.form-sample').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(e.target);
-            try {
-                const response = await fetch('{{route('editProfileDB')}}', {
-                    method: 'PUT',
-                    body: formData,
-                });
-                // Handle the response accordingly
-            } catch (error) {
-                // Handle error
-            }
-        });
-    </script>
 @endsection
