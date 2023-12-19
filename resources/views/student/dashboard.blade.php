@@ -14,6 +14,7 @@
                     </div>
                     <div class=" card-img">
                         <img src="{{ asset($sub->subject_image) }}" height="100" class="card-img" alt="{{$sub->subject_name}}">
+                        <a href="{{\URL::to('/home')}}"><button class="btn col-12 btn-primary" type="button" >Enroll</button></a>
                     </div>
                 </div>
             </div>

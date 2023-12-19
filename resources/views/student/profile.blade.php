@@ -24,7 +24,7 @@
                                     <div class="mt-3">
                                         <h4>{{$details -> username}}</h4>
                                         <p class="text-secondary mb-1">About</p>
-                                        <p class="text-muted font-size-sm">{{$details -> address}}</p>
+                                        <p class="text-muted font-size-sm fas fa-location-arrow">{{$details -> address}}</p>
                                     </div>
                             </div>
                         </div>
